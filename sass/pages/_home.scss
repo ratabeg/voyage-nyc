@@ -17,7 +17,10 @@
 
 .section-features{
     padding: 20rem 0;
-    background-image: linear-gradient(to right bottom,rgba($color-primary-light, 0.80), rgba($color-primary-dark, 0.6)), url("../img/Manhattan-NY.jpg");
+    background-image: linear-gradient(to right bottom,rgba($color-secondary, 0.80), rgba($color-secondary-dark, 0.6)), url("../img/Manhattan-NY.jpg");
+
+    // background-image: linear-gradient(to right bottom,rgba($color-secondary, 0.80), rgba($color-primary-dark, 0.6)), url("../img/Manhattan-NY.jpg");
+    // background-image: linear-gradient(to right bottom,rgba($color-primary-light, 0.80), rgba($color-primary-dark, 0.6)), url("../img/Manhattan-NY.jpg");
     background-size: cover;
     background-position: top;
     clip-path: polygon(0 15%, 100% 0,100% 75vh,0 100%);
@@ -27,7 +30,10 @@
 }
 
 .section-tour{
+
+    
     background-color: $color-grey-light-1;
     padding: 25rem 0 50rem 0;
-    margin-top: -10vh;
+    margin-top: -20vh;
+    background-image: url('');
 }

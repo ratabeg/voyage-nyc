@@ -2,19 +2,69 @@
    
     perspective: 150rem;
     -moz-perspective: 150rem;
+    position: relative;
+    height: 50rem;
+
 
     &__slide{
-        background-color: orangered;
-        height: 50rem;
-        transition: all 0.8s;
+        // background-color: orangered;
+        color: $color-white;
+        transition: all 0.8s ease;
 
-        &--front{ background-color: orangered;        }
-        &--back{  background-color: green;        }
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 50rem;
+        width: 100%;
+
+
+
+        backface-visibility: hidden;
+        box-shadow: 0 1.4rem 4rem rgba($color-black,0.15);    
+        border-radius: 3px;
+
+
+        &--front{
+            background-color:$color-white;  
+            
+        }
+
+        &--back{ 
+             transform: rotateY(180deg);
+             &-1{
+                background-image: linear-gradient(to right bottom,rgba($color-third-light, 0.8),rgba($color-third, 0.6))   ;
+             }
+             &-2{
+                background-image: linear-gradient(to  right bottom,rgba($color-nyc-blue, 0.80), rgba($color-nyc-blue-light, 0.9))   ;
+             }
+             &-3{
+                background-image: linear-gradient(to  right bottom,rgba($color-secondary-light, 0.80), rgba($color-secondary, 0.6))   ;
+             }
+        }
+       
     
+        
     }
 
-    &:hover &__slide{
+    &:hover &__slide--front{
         transform: rotateY(180deg);
+    }
+    &:hover &__slide--back{
+        transform: rotateY(0deg);
+    }
+
+
+    &_picture{
+        background-position: center;
+        background-size: cover;
+        width: auto;
+        height: 23rem;
+        &--1{
+            background-image: url('https://www.hobokengirl.com/wp-content/uploads/2022/10/Featured-Image-1-1.jpg');    
+        }
+        &--2{
+            background-image: url('https://t3.gstatic.com/licensed-image?q=tbn:ANd9GcTDKnkTzWZNI2M5_IGoH9B3HarjwGpN5xa9BoaARcRENlU-quTA9wadvPwbAd4C0m_U');    
+        }
     }
 }
 

@@ -72,13 +72,29 @@ body {
   text-transform: uppercase;
   font-weight: 700;
   display: inline-block;
-  background-image: linear-gradient(to right, #7ed56f, #28b485);
+  background-image: linear-gradient(to right, #003884, #28b485);
   -webkit-background-clip: text;
   color: transparent;
   letter-spacing: 2px;
   transition: all 0.2s;
 }
 .heading-secondary:hover {
+  transform: skewY(2deg) skewX(15deg) scale(1.1);
+  text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.heading-secondary--orange {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+  background-image: linear-gradient(to right, #FF6600, #b74900);
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: 2px;
+  transition: all 0.2s;
+}
+.heading-secondary--orange:hover {
   transform: skewY(2deg) skewX(15deg) scale(1.1);
   text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
 }
@@ -166,15 +182,15 @@ body {
 
 .btn-text:link, .btn-text:visited {
   font-size: 1.6rem;
-  color: #55c57a;
+  color: #003884;
   display: inline-block;
   text-decoration: none;
-  border-bottom: 1px solid #55c57a;
+  border-bottom: 1px solid #003884;
   padding: 3px;
   transition: all 0.2s;
 }
 .btn-text:hover {
-  background-color: #55c57a;
+  background-color: #003884;
   color: #fff;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
 }
@@ -210,7 +226,7 @@ body {
   transform: scale(1.05) translateY(0.5);
   box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
   z-index: 20;
-  outline: 1.5rem solid #55c57a;
+  outline: 1.5rem solid #777;
 }
 .composition:hover .composition__photo:not(:hover) {
   transform: scale(0.95);
@@ -228,7 +244,7 @@ body {
 .feature-box__icon {
   font-size: 6rem;
   margin-bottom: 0.5rem;
-  background-image: linear-gradient(to right, #7ed56f, #28b485);
+  background-image: linear-gradient(to right, #003884, #28b485);
   -webkit-background-clip: text;
   color: transparent;
 }
@@ -238,25 +254,58 @@ body {
 .card {
   perspective: 150rem;
   -moz-perspective: 150rem;
+  position: relative;
+  height: 50rem;
 }
 .card__slide {
-  background-color: orangered;
+  color: #fff;
+  transition: all 0.8s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
   height: 50rem;
-  transition: all 0.8s;
+  width: 100%;
+  backface-visibility: hidden;
+  box-shadow: 0 1.4rem 4rem rgba(0, 0, 0, 0.15);
+  border-radius: 3px;
 }
 .card__slide--front {
-  background-color: orangered;
+  background-color: #fff;
 }
 .card__slide--back {
-  background-color: green;
-}
-.card:hover .card__slide {
   transform: rotateY(180deg);
+}
+.card__slide--back-1 {
+  background-image: linear-gradient(to right bottom, rgba(171, 212, 194, 0.8), rgba(161, 199, 182, 0.6));
+}
+.card__slide--back-2 {
+  background-image: linear-gradient(to right bottom, rgba(32, 40, 112, 0.8), rgba(31, 43, 151, 0.9));
+}
+.card__slide--back-3 {
+  background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.8), rgba(255, 102, 0, 0.6));
+}
+.card:hover .card__slide--front {
+  transform: rotateY(180deg);
+}
+.card:hover .card__slide--back {
+  transform: rotateY(0deg);
+}
+.card_picture {
+  background-position: center;
+  background-size: cover;
+  width: auto;
+  height: 23rem;
+}
+.card_picture--1 {
+  background-image: url("https://www.hobokengirl.com/wp-content/uploads/2022/10/Featured-Image-1-1.jpg");
+}
+.card_picture--2 {
+  background-image: url("https://t3.gstatic.com/licensed-image?q=tbn:ANd9GcTDKnkTzWZNI2M5_IGoH9B3HarjwGpN5xa9BoaARcRENlU-quTA9wadvPwbAd4C0m_U");
 }
 
 .header {
   height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.6)), url("../img/new-york-city.jpeg");
+  background-image: linear-gradient(to right bottom, rgba(0, 56, 132, 0.8), rgba(40, 180, 133, 0.6)), url("../img/new-york-city.jpeg");
   background-size: cover;
   background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
@@ -323,7 +372,7 @@ body {
 
 .section-features {
   padding: 20rem 0;
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.6)), url("../img/Manhattan-NY.jpg");
+  background-image: linear-gradient(to right bottom, rgba(0, 56, 132, 0.8), rgba(40, 180, 133, 0.6)), url("../img/Manhattan-NY.jpg");
   background-size: cover;
   background-position: top;
   clip-path: polygon(0 15%, 100% 0, 100% 75vh, 0 100%);
@@ -332,7 +381,7 @@ body {
 
 .section-features {
   padding: 20rem 0;
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.6)), url("../img/Manhattan-NY.jpg");
+  background-image: linear-gradient(to right bottom, rgba(255, 102, 0, 0.8), rgba(183, 73, 0, 0.6)), url("../img/Manhattan-NY.jpg");
   background-size: cover;
   background-position: top;
   clip-path: polygon(0 15%, 100% 0, 100% 75vh, 0 100%);
@@ -342,7 +391,8 @@ body {
 .section-tour {
   background-color: #f7f7f7;
   padding: 25rem 0 50rem 0;
-  margin-top: -10vh;
+  margin-top: -20vh;
+  background-image: url("");
 }
 
 /*# sourceMappingURL=style.css.map */
