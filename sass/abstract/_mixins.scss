@@ -1,0 +1,11 @@
+@mixin clearfix{
+    &::after{
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin custom_background_image($image){
+    background-image: ($image);
+}
