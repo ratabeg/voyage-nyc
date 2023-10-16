@@ -35,7 +35,7 @@
                 background-image: linear-gradient(to right bottom,rgba($color-third-light, 0.8),rgba($color-third, 0.6))   ;
              }
              &-2{
-                background-image: linear-gradient(to  right bottom,rgba($color-nyc-blue, 0.80), rgba($color-nyc-blue-light, 0.9))   ;
+                background-image: linear-gradient(to  right bottom,rgba($color-brown-light, 0.80), rgba($color-brown, 0.9))   ;
              }
              &-3{
                 background-image: linear-gradient(to  right bottom,rgba($color-secondary-light, 0.80), rgba($color-secondary, 0.6))   ;
@@ -59,12 +59,96 @@
         background-size: cover;
         width: auto;
         height: 23rem;
+        background-blend-mode: color-burn;
+        -webkit-clip-path:polygon(0 0, 100% 0,100% 85% ,0 100%);
+        clip-path: polygon(0 0, 100% 0,100% 85% ,0 100%);
         &--1{
-            background-image: url('https://www.hobokengirl.com/wp-content/uploads/2022/10/Featured-Image-1-1.jpg');    
+            // background-image: url('https://www.hobokengirl.com/wp-content/uploads/2022/10/Featured-Image-1-1.jpg');  
+            background-image: linear-gradient(to right bottom,$color-third,$color-third-light),url('https://www.hobokengirl.com/wp-content/uploads/2022/10/Featured-Image-1-1.jpg');  
         }
         &--2{
-            background-image: url('https://t3.gstatic.com/licensed-image?q=tbn:ANd9GcTDKnkTzWZNI2M5_IGoH9B3HarjwGpN5xa9BoaARcRENlU-quTA9wadvPwbAd4C0m_U');    
+            background-image: url('https://t3.gstatic.com/licensed-image?q=tbn:ANd9GcTDKnkTzWZNI2M5_IGoH9B3HarjwGpN5xa9BoaARcRENlU-quTA9wadvPwbAd4C0m_U'); 
         }
+        &--3{
+            background-image: url('https://media.timeout.com/images/105785000/1536/864/image.jpg');
+        }
+    }
+
+
+    &_heading{
+        font-size: 2.8rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        color:$color-white;
+        text-align: right;
+
+        position: absolute;
+        top: 18rem;
+        right: 2rem;
+
+        &-span{
+            padding: 1rem 1.5rem;
+            box-decoration-break: clone;
+            --webkit-box-decoration-break: clone;
+
+        }
+        &-span-1{
+            background-image: linear-gradient(to right bottom,rgba($color-third,0.85),rgba($color-third-light,0.85));
+        }
+        &-span-2{
+            background-image: linear-gradient(to right bottom,rgba($color-brown,0.85),rgba($color-brown-light,0.85));
+        }
+        &-span-3{
+            background-image: linear-gradient(to right bottom,rgba($color-secondary,0.85),rgba($color-secondary-light,0.85));
+        }
+
+    }
+
+    &_details{
+        color: rgba( $color-grey-dark,0.9);
+
+        ul{
+
+            width: 80%;
+            list-style: none;
+            margin: 0 auto;
+            li{
+                text-align: center;
+                font-size: 1.5rem;
+                padding: 1rem;
+
+                &:not(:last-child){
+                    border-bottom: 1px solid ;
+                }
+            }
+        }
+
+        
+    }
+
+    &__cta{
+        position: absolute;
+        top:50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 90%;
+        text-align: center;
+
+    }
+
+    &__price-box{
+        margin-bottom: 8rem;
+        color:$color-white;
+    }
+
+    &__price-only{
+        font-size: 1.4rem;
+        text-transform: uppercase;
+
+    }
+    &__price-value{
+        font-size: 6rem;
+        font-weight: 100;
     }
 }
 
