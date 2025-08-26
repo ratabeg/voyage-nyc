@@ -196,7 +196,7 @@ body {
 }
 .btn-text:active {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-  transform: translateY(0px);
+  transform: translateY(1px);
 }
 
 .composition {
@@ -369,6 +369,78 @@ body {
   font-weight: 100;
 }
 
+.bg-video {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  opacity: 0.4;
+}
+.bg-video__content {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.story {
+  width: 75%;
+  margin: 0 auto;
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-radius: 3px;
+  padding: 6rem;
+  font-size: 1.6rem;
+  transform: skewX(-12deg);
+}
+.story > * {
+  transform: skewX(12deg);
+}
+.story__shape {
+  width: 15rem;
+  height: 15rem;
+  float: left;
+  background-color: #003884;
+  shape-outside: circle();
+  clip-path: circle();
+  --webkit-clip-path: circle();
+  --webkit-shape-outside: circle();
+  margin-right: 4rem;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  position: relative;
+}
+.story__img {
+  height: 100%;
+  transform: translateX(-15%) scale(1.4);
+  backface-visibility: hidden;
+  transition: all 0.5s;
+}
+.story__text {
+  transform: skewX(12deg);
+}
+.story__caption {
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 120%);
+  opacity: 0;
+  text-align: center;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  transition: all 0.5s;
+}
+.story:hover .story__caption {
+  opacity: 1;
+  transform: translate(-50%, -50%);
+}
+.story:hover .story__img {
+  filter: blur(2px) brightness(0.7);
+  transform: scale(1) translateX(-15%);
+}
+
 .header {
   height: 95vh;
   background-image: linear-gradient(to right bottom, rgba(0, 56, 132, 0.8), rgba(40, 180, 133, 0.6)), url("../img/new-york-city.jpeg");
@@ -418,16 +490,16 @@ body {
   width: calc((100% - 2 * 6rem) / 3);
 }
 .row .col-2-of-3 {
-  width: calc(2 * ((100% - 2 * 6rem)/3) + 6rem );
+  width: calc(2 * (100% - 2 * 6rem) / 3 + 6rem);
 }
 .row .col-1-of-4 {
-  width: calc((100% - 3*6rem) / 4);
+  width: calc((100% - 3 * 6rem) / 4);
 }
 .row .col-2-of-4 {
-  width: calc( (2*(100% - 3*6rem)/4) + 6rem );
+  width: calc(2 * (100% - 3 * 6rem) / 4 + 6rem);
 }
 .row .col-3-of-4 {
-  width: calc( (3*(100% - 3*6rem)/4) + 2* 6rem );
+  width: calc(3 * (100% - 3 * 6rem) / 4 + 2 * 6rem);
 }
 
 .section-about {
@@ -458,9 +530,14 @@ body {
 
 .section-tour {
   background-color: #f7f7f7;
-  padding: 25rem 0 50rem 0;
-  margin-top: -20vh;
+  padding: 25rem 1rem 15rem 1rem;
+  margin-top: -10rem;
   background-image: url("");
+}
+
+.section-stories {
+  padding: 15rem 0;
+  position: relative;
 }
 
 /*# sourceMappingURL=style.css.map */

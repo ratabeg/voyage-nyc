@@ -27,14 +27,20 @@
     clip-path: polygon(0 15%, 100% 0,100% 75vh,0 100%);
     transform: translateY(-20rem);
 
-
-
 }
 
 .section-tour{
-
     background-color: $color-grey-light-1;
-    padding: 25rem 0 50rem 0;
-    margin-top: -20vh;
+    // padding: 25rem 0 50rem 0;
+    // margin-top: -20vh;
+    padding: 25rem 1rem 15rem 1rem;
+    margin-top: -10rem;
     background-image: url('');
+}
+
+.section-stories{
+    // background-color: $color-grey-light-1;
+    padding: 15rem 0;
+    position: relative;
+    
 }
