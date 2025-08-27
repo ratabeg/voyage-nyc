@@ -136,7 +136,7 @@ body {
   margin-bottom: 8rem;
 }
 
-.btn:link, .btn:visited {
+.btn, .btn:link, .btn:visited {
   text-decoration: none;
   text-transform: uppercase;
   padding: 15px 40px;
@@ -144,8 +144,10 @@ body {
   border-radius: 100px;
   transition: all 0.2s;
   position: relative;
+  border: none;
+  cursor: pointer;
 }
-.btn:hover {
+.btn:hover, .btn:focus {
   transform: translateY(-3px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
@@ -155,6 +157,10 @@ body {
 .btn-white {
   background-color: #fff;
   color: #777;
+}
+.btn-green {
+  background: linear-gradient(to right, #003884, #FF6600);
+  color: #ffb900;
 }
 .btn::after {
   content: "";
@@ -441,6 +447,90 @@ body {
   transform: scale(1) translateX(-15%);
 }
 
+.form__group:not(:last-child) {
+  margin-bottom: 2rem;
+}
+.form__input {
+  font-size: 1.5rem;
+  padding: 1.5rem 2rem;
+  border-radius: 2px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  font-family: inherit;
+  transition: all 0.2;
+  border-bottom: 3px solid transparent;
+  width: 100%;
+  display: block;
+  color: inherit;
+}
+.form__input:focus {
+  outline: none;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+  border-bottom: 3px solid #28b485;
+}
+.form__input:focus:invalid {
+  border-bottom: 3px solid #FF6600;
+}
+.form__input::-webkit-input-placeholder {
+  color: #1C6EA4;
+}
+.form__label {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-left: 2rem;
+  margin-top: 0.7rem;
+  display: block;
+  transition: all 0.3s;
+}
+.form__input:placeholder-shown ~ .form__label {
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-4rem);
+}
+.form__radio-group {
+  width: 49%;
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+.form__radio-input {
+  display: none;
+}
+.form__radio-label {
+  font-size: 1.6rem;
+  cursor: pointer;
+  position: relative;
+  padding-left: 4rem;
+  color: #154D71;
+}
+.form__radio-button {
+  width: 3rem;
+  height: 3rem;
+  border: 5px solid #b74900;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: block;
+}
+.form__radio-button::after {
+  content: "";
+  background-color: #b74900;
+  width: 1.7rem;
+  height: 1.7rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.form__radio-input:checked + .form__radio-label .form__radio-button::after {
+  opacity: 1;
+}
+
 .header {
   height: 95vh;
   background-image: linear-gradient(to right bottom, rgba(0, 56, 132, 0.8), rgba(40, 180, 133, 0.6)), url("../img/new-york-city.jpeg");
@@ -538,6 +628,30 @@ body {
 .section-stories {
   padding: 15rem 0;
   position: relative;
+}
+
+.section-book {
+  padding: 15rem 0;
+  background-image: linear-gradient(to right, #154D71, #28b485);
+}
+.section-book:hover .book {
+  transform: translateY(-4px);
+}
+
+.book {
+  background-image: linear-gradient(105deg, rgba(255, 102, 0, 0.5) 0%, rgba(255, 185, 0, 0.5) 50%, transparent 50%), url("../img/east40th.jpg");
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: fill;
+  box-shadow: rgba(255, 102, 0, 0.5) 1.95rem 1.95rem 20px;
+  width: 100%;
+  height: 50rem;
+  border-radius: 2px;
+  transition: all 0.5s;
+}
+.book__form {
+  width: 50%;
+  padding: 6rem;
 }
 
 /*# sourceMappingURL=style.css.map */

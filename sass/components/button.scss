@@ -2,7 +2,7 @@
 .btn{
 
 
-    &:link,&:visited{
+    &,&:link,&:visited{
     text-decoration: none;
     text-transform: uppercase;
     padding: 15px 40px;
@@ -10,8 +10,13 @@
     border-radius: 100px;
     transition: all 0.2s;
     position: relative;
+
+
+    //change for the <button>
+    border: none;
+    cursor: pointer;
 }
-&:hover{
+&:hover,&:focus{
     transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 
@@ -26,6 +31,11 @@
     background-color: $color-white;
     color: $color-grey-dark;
 
+}
+
+&-green{
+    background: linear-gradient(to right, $color-primary, $color-secondary);
+    color: $color-secondary-light;
 }
 
 &::after{
