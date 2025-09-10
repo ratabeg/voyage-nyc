@@ -14,10 +14,8 @@
     <title>Document</title>
   </head>
   <body>
-
-
     <div class="navigation">
-      <input type="checkbox" class="navigation__checkbox" id="navi-toogle">
+      <input type="checkbox" class="navigation__checkbox" id="navi-toogle" />
       <label for="navi-toogle" class="navigation__button">
         <span class="navigation__icon">&nbsp;</span>
       </label>
@@ -25,11 +23,21 @@
 
       <nav class="navigation__nav">
         <ul class="navigation__list">
-          <li class="navigation__item"><a href="" class="navigation__link">About</a></li>
-          <li class="navigation__item"><a href="" class="navigation__link">Your benfits</a></li>
-          <li class="navigation__item"><a href="" class="navigation__link">Popular</a></li>
-          <li class="navigation__item"><a href="" class="navigation__link">Stories</a></li>
-          <li class="navigation__item"><a href="" class="navigation__link">Book now</a></li>
+          <li class="navigation__item">
+            <a href="" class="navigation__link">About</a>
+          </li>
+          <li class="navigation__item">
+            <a href="" class="navigation__link">Your benfits</a>
+          </li>
+          <li class="navigation__item">
+            <a href="" class="navigation__link">Popular</a>
+          </li>
+          <li class="navigation__item">
+            <a href="" class="navigation__link">Stories</a>
+          </li>
+          <li class="navigation__item">
+            <a href="" class="navigation__link">Book now</a>
+          </li>
         </ul>
       </nav>
     </div>
@@ -331,7 +339,7 @@
         </div>
       </section>
 
-      <section id="popup" class="section-book">
+      <section id="sign up" class="section-book">
         <div class="row">
           <div class="book">
             <div class="book__form">
@@ -388,7 +396,7 @@
                 </div>
 
                 <div class="form__group">
-                   <button class="btn btn-green">Next Step &rAarr;</button>
+                  <button class="btn btn-green">Next Step &rAarr;</button>
                 </div>
               </form>
             </div>
@@ -399,24 +407,68 @@
 
     <footer class="footer">
       <div class="footer__logo-box">
-        <img src="img/nyc-logo.svg" alt="logo" class="footer__logo">
+        <img src="img/nyc-logo.svg" alt="logo" class="footer__logo" />
       </div>
       <div class="row">
         <div class="col-1-of-2">
-            <div class="footer__navigation">
-              <ul class="footer__list">
-                <li class="footer__item"><a href="" class="footer__link">Company</a></li>
-                <li class="footer__item"><a href="" class="footer__link">Careers</a></li>
-                <li class="footer__item"><a href="" class="footer__link">Contact Us</a></li>
-                <li class="footer__item"><a href="" class="footer__link">Terms</a></li>
-              </ul>
-            </div>
+          <div class="footer__navigation">
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a href="" class="footer__link">Company</a>
+              </li>
+              <li class="footer__item">
+                <a href="" class="footer__link">Careers</a>
+              </li>
+              <li class="footer__item">
+                <a href="" class="footer__link">Contact Us</a>
+              </li>
+              <li class="footer__item">
+                <a href="" class="footer__link">Terms</a>
+              </li>
+            </ul>
+          </div>
         </div>
         <div class="col-1-of-2">
-            <p class="footer__copyright">Copyright &copy Built By Raouf Atabeg with ❤️</p>
+          <p class="footer__copyright">
+            Copyright &copy Built By Raouf Atabeg with ❤️
+          </p>
         </div>
       </div>
-
     </footer>
+
+    <div  class="popup" id="popup">
+      <div class="popup__content">
+        <div class="popup__left">
+          <img src="./img/nat-2.jpg" alt="" class="popup__img" />
+          <img src="./img/nat-3.jpg" alt="" class="popup__img" />
+        </div>
+
+        <div class="popup__right">
+          <a href="#section-tours" class="popup__close">&times;</a>
+          <div class="u-center-text u-margin-bottom-small">
+            <h2 class="heading-secondary--orange">The Journey Begins NOW!</h2>
+            <h2 class="heading-tertiary">
+              IMPORTANT- Please read terms before booking
+            </h2>
+          </div>
+          <p class="popup__text">
+            Cras porta nunc nec lorem sodales, sit amet posuere lacus dignissim.
+            Donec magna nisl, varius a ipsum at, bibendum aliquet purus. Proin
+            sodales nulla eu dignissim accumsan. Class aptent taciti sociosqu ad
+            litora torquent per conubia nostra, per inceptos himenaeos. Aliquam
+            ante orci, varius ac lorem a, imperdiet pulvinar nisi. Vestibulum
+            efficitur sem non euismod ultricies. Pellentesque habitant morbi
+            tristique senectus et netus et malesuada fames ac turpis egestas.
+            Maecenas eu ultrices ex. Duis convallis lacus vitae leo pretium
+            venenatis.
+          </p>
+
+          <div class="u-center-text u-margin-bottom-small">
+
+          <a href="#" class="btn btn-white">Book now!</a>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

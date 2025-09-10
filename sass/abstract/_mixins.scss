@@ -9,3 +9,10 @@
 @mixin custom_background_image($image){
     background-image: ($image);
 }
+
+@mixin abscenter(){
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}

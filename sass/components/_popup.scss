@@ -1,0 +1,93 @@
+.popup {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba($color: $color-black, $alpha: 0.8);
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+
+  &:target {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__close {
+    font-size: 2.7rem;
+    border-radius: 50%;
+    transition: background 0.2s ease-in-out;
+    transform: translate(100%, -50%);
+
+    &:link,
+    &:visited {
+      text-decoration: none;
+      font-family: 2.4rem;
+      position: absolute;
+      top: 4rem;
+      left: 90%;
+      display: table;
+      text-align: center;
+      vertical-align: middle;
+      color: $color-primary-dark;
+      width: 5rem;
+      height: 5rem;
+      background-size: 0%;
+      background-repeat: no-repeat;
+      background-position: top;
+      background-image: linear-gradient(
+        45deg,
+        $color-secondary 0%,
+        $color-secondary 50%
+      );
+    }
+
+    &:hover,
+    &:active {
+      color: $color-secondary-light;
+      background-size: 100%;
+      background-position: bottom;
+    }
+  }
+
+  &__content {
+    width: 75%;
+    // height: 75%;
+    background-color: beige;
+    border-radius: 3px;
+    box-shadow: $color-primary-dark 0rem 1rem 1rem;
+    @include abscenter;
+    display: table;
+  }
+
+  &__right {
+    width: 66.66666666%;
+    // float: right;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 1.8rem 5rem;
+  }
+
+  &__left {
+    width: 33.33333%;
+    // float: left;
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  &__img {
+    width: 100%;
+    display: block;
+  }
+
+  &__text {
+    margin-left: 2rem;
+    margin-bottom: 2.2rem;
+    column-count: 2; //this creates the border line in between the two columns text
+    column-gap: 2em;
+    column-rule: 2px solid $color-primary-dark;
+    // hyphens: auto; adds hyphenation to the text
+  }
+}
